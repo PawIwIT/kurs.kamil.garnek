@@ -37,7 +37,7 @@ public class Main {
                 case 1 -> sklep.wyswietlTowary();
                 case 2 -> koszyk.dodajPrzedmiotDoKoszyka();
                 case 3 -> System.out.println("wybrano 3");
-                case 4 -> System.out.println(koszyk.twojKoszyk());
+                case 4 -> koszyk.wyswietlKoszyk();
                 case 5 -> System.out.println("wybrano 5");
                 case 6 -> czyKontynuowacZakupy = false;
             }
