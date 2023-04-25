@@ -20,6 +20,7 @@ public class Main {
         Sklep sklep = new Sklep();
         Koszyk koszyk = new Koszyk();
         sklep.przygotujTowary();
+
         boolean czyKontynuowacZakupy = true;
 
         while (czyKontynuowacZakupy) {
@@ -35,7 +36,7 @@ public class Main {
 
             switch (wyborUzytkownia) {
                 case 1 -> sklep.wyswietlTowary();
-                case 2 -> koszyk.dodajPrzedmiotDoKoszyka();
+                case 2 -> koszyk.dodajPrzedmiotDoKoszyka(sklep);
                 case 3 -> System.out.println("wybrano 3");
                 case 4 -> koszyk.wyswietlKoszyk();
                 case 5 -> System.out.println("wybrano 5");

@@ -10,14 +10,13 @@ public class Koszyk {
     private List<Przedmiot> towaryWKoszyku = new ArrayList<Przedmiot>();
 
     Scanner scanner = new Scanner(System.in);
-    Sklep sklep = new Sklep();
 
-    boolean dostepnosc = true;
+    boolean czyKontynuwoacDodawanie = true;
 
-    public void dodajPrzedmiotDoKoszyka() {
+    public void dodajPrzedmiotDoKoszyka(Sklep sklep) {
         System.out.println("Podaj numer towaru");
 
-        while (dostepnosc) {
+        while (czyKontynuwoacDodawanie) {
             System.out.println("0.lopata");
             System.out.println("1.grabie");
             System.out.println("2.ziemia");
@@ -26,11 +25,10 @@ public class Koszyk {
 
             int wyborUzytkownika = scanner.nextInt();
 
-
             switch (wyborUzytkownika) {
-                case 0 -> towaryWKoszyku.add(sklep.map.get(0));
+                case 0 -> towaryAdd(sklep.map.get(0));
                 case 1 -> towaryWKoszyku.add(sklep.map.get(1));
-                case 5 -> dostepnosc = false;
+                case 5 -> czyKontynuwoacDodawanie = false;
 
             }
 
@@ -45,8 +43,12 @@ public class Koszyk {
         }
 
     }
-
+public void towaryAdd(Przedmiot przedmiot){
+        towaryWKoszyku.add(przedmiot);
 }
+    }
+
+
 
 
 
