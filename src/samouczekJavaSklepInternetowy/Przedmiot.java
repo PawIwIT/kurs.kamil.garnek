@@ -27,7 +27,7 @@ public class Przedmiot {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // dodac ze cena to zł
         return "Przedmiot{" +
                 "name='" + name + '\'' +
                 ", cena=" + cena +
