@@ -5,34 +5,29 @@ import java.util.Map;
 
 public class Sklep {
 
-    Map<Integer, Przedmiot> map = new HashMap<>();
-
-
+    private Map<Integer, Przedmiot> mapaPrzedmiotow = new HashMap<>();
 
     public void przygotujTowary() {
 
-        map.put(0, new Przedmiot("lopata", 10));
-        map.put(1, new Przedmiot("grabie", 5));
-        map.put(2, new Przedmiot("ziemia", 3));
-        map.put(3, new Przedmiot("donica", 35));
-
+        getMapaPrzedmiotow().put(0, new Przedmiot("lopata", 10));
+        getMapaPrzedmiotow().put(1, new Przedmiot("grabie", 5));
+        getMapaPrzedmiotow().put(2, new Przedmiot("ziemia", 3));
+        getMapaPrzedmiotow().put(3, new Przedmiot("donica", 35));
 
     }
 
     public void wyswietlTowary() {
-        for (Map.Entry<Integer, Przedmiot> wyswietlTowarDostepnywSklepie : map.entrySet()) {
+        for (Map.Entry<Integer, Przedmiot> wyswietlTowarDostepnywSklepie : getMapaPrzedmiotow().entrySet()) {
             System.out.println(wyswietlTowarDostepnywSklepie);
         }
-
-
     }
 
-    public void setMap(Map<Integer, Przedmiot> map) {
-        this.map = map;
+    public void setMapaPrzedmiotow(Map<Integer, Przedmiot> mapaPrzedmiotow) {
+        this.mapaPrzedmiotow = mapaPrzedmiotow;
     }
 
-    public Map<Integer, Przedmiot> getMap() {
-        return map;
+    public Map<Integer, Przedmiot> getMapaPrzedmiotow() {
+        return mapaPrzedmiotow;
     }
 }
 

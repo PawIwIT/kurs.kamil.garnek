@@ -12,7 +12,7 @@ public class Main {
     // Koszyk powinien także być w stanie policzyć sumaryczną wartość zamówienia oraz wyświetlić swoją zawartość.
     // Pamiętaj o poprawnym obsłużeniu sytuacji wyjątkowych np. usunięcie elementów z pustego koszyka czy dodaniu ujemnej liczby przedmiotów.
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
 
         System.out.println("Witamy w naszym sklepie internetowym");
 

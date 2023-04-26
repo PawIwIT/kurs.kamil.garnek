@@ -2,6 +2,7 @@ package samouczekJavaSklepInternetowy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Koszyk {
@@ -13,40 +14,40 @@ public class Koszyk {
 
     boolean czyKontynuwoacDodawanie = true;
 
-    public void dodajPrzedmiotDoKoszyka(Sklep sklep) {
+    public void dodajPrzedmiotDoKoszyka(Sklep sklep) throws IllegalAccessException {
         System.out.println("Podaj numer towaru");
 
         while (czyKontynuwoacDodawanie) {
-            System.out.println("0.lopata");
-            System.out.println("1.grabie");
-            System.out.println("2.ziemia");
-            System.out.println("3.donica");
-            System.out.println("5.wroc do Menu");
 
-            int wyborUzytkownika = scanner.nextInt();
-
-            switch (wyborUzytkownika) {
-                case 0 -> towaryAdd(sklep.map.get(0));
-                case 1 -> towaryWKoszyku.add(sklep.map.get(1));
-                case 5 -> czyKontynuwoacDodawanie = false;
-
+            for (Map.Entry<Integer, Przedmiot> wyswietlTowarDostepnywSklepie : sklep.getMapaPrzedmiotow().entrySet()) {
+                System.out.println("id " + wyswietlTowarDostepnywSklepie);
             }
+            System.out.println("Podaj kod towaru, ktory chcesz dodac do koszyka");
+            int wyborUzytkownika = scanner.nextInt();
+            towaryWKoszyku.add(sklep.getMapaPrzedmiotow().get(wyborUzytkownika));
 
+           if (wyborUzytkownika > sklep.getMapaPrzedmiotow().size()){
 
+               throw new IllegalAccessException("Nie ma towaru o takim ID");
+           }
         }
-
     }
-
+    public void usunPrzedmiotzKoszyka(Sklep sklep) {
+    }
     public void wyswietlKoszyk() {
         for (Przedmiot przedmiot : towaryWKoszyku) {
             System.out.println(przedmiot);
         }
+    }
 
-    }
-public void towaryAdd(Przedmiot przedmiot){
+    public void towaryAdd(Przedmiot przedmiot) {
         towaryWKoszyku.add(przedmiot);
-}
     }
+
+    public void towaryRemove(Przedmiot przedmiot) {
+        towaryWKoszyku.remove(przedmiot);
+    }
+}
 
 
 
