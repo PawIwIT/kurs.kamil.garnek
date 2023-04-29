@@ -26,14 +26,19 @@ public class Koszyk {
             int wyborUzytkownika = scanner.nextInt();
             towaryWKoszyku.add(sklep.getMapaPrzedmiotow().get(wyborUzytkownika));
 
-           if (wyborUzytkownika > sklep.getMapaPrzedmiotow().size()){
+            if (wyborUzytkownika > sklep.getMapaPrzedmiotow().size()) {
 
-               throw new IllegalAccessException("Nie ma towaru o takim ID");
-           }
+                throw new IllegalAccessException("Nie ma towaru o takim ID");
+            }
+            if (wyborUzytkownika == -1) {
+                czyKontynuwoacDodawanie = false;
+            }
         }
     }
+
     public void usunPrzedmiotzKoszyka(Sklep sklep) {
     }
+
     public void wyswietlKoszyk() {
         for (Przedmiot przedmiot : towaryWKoszyku) {
             System.out.println(przedmiot);
@@ -47,9 +52,17 @@ public class Koszyk {
     public void towaryRemove(Przedmiot przedmiot) {
         towaryWKoszyku.remove(przedmiot);
     }
+
+    public void wyswietlCentTowarowwKoszyku() {
+        for (Przedmiot przedmiot : towaryWKoszyku) {
+            double cena = przedmiot.getCena();
+           
+            /*System.out.println(cena);*/
+
+
+        }
+
+    }
 }
-
-
-
 
 

@@ -39,13 +39,9 @@ public class Main {
                 case 2 -> koszyk.dodajPrzedmiotDoKoszyka(sklep);
                 case 3 -> System.out.println("wybrano 3");
                 case 4 -> koszyk.wyswietlKoszyk();
-                case 5 -> System.out.println("wybrano 5");
+                case 5 -> koszyk.wyswietlCentTowarowwKoszyku();
                 case 6 -> czyKontynuowacZakupy = false;
             }
-
-
         }
-
-
     }
 }
