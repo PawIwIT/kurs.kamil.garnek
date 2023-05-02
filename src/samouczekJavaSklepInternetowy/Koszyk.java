@@ -56,7 +56,7 @@ public class Koszyk {
     public void wyswietlCentTowarowwKoszyku() {
         for (Przedmiot przedmiot : towaryWKoszyku) {
             double cena = przedmiot.getCena();
-           
+
             /*System.out.println(cena);*/
 
 
