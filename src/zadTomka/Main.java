@@ -160,9 +160,9 @@ public class Main {
         String[] tabSlow = {slowo1, slowo2, slowo3, slowo4, slowo5};
 
         for (int i = tabSlow.length - 1; i >= 0; i--) {
-            String slowoPrzedOdwroceniem = tabSlow[i];
+            String oslowPrzedOdwroceniem = tabSlow[i];
             String[] slowoPoSplit = slowoPrzedOdwroceniem.split("");
-            String odwroconeSlowo2;
+
             String odwroconeSlowo = "";
             for (int j = slowoPoSplit.length - 1; j >= 0; j--) {
                 odwroconeSlowo = odwroconeSlowo + slowoPoSplit[j];
@@ -172,20 +172,150 @@ public class Main {
 
         // 10, -2, 1, 100, 20, -15, 0, 10, // -15, -2, 0, 1, 10, 10, 20, 100.
 
-        int[] tablicaLiczb = new int[7];
+      /*  int[] tablicaLiczb = new int[8];
 
         System.out.println("Podaj 8 wybranych przez siebie cyfr");
-        for (int i = 0; i < 7; i++) {
-            int liczbaUzytkownia = scanner.nextInt();
-            tablicaLiczb[i] = liczbaUzytkownia;
-            
+        //pobieramy liczby
+        for (int i = 0; i < tablicaLiczb.length; i++) {
+            System.out.println((i + 1) + " liczba: ");
+            tablicaLiczb[i] = pobierzLiczbe();
+
         }
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < tablicaLiczb.length; i++) {
             System.out.println(tablicaLiczb[i]);
         }
+
     }
 
+    public static int pobierzLiczbe() {
+        return new Scanner(System.in).nextInt();
+    }*/
+
+
+        //Napisz program, który pobierze od użytkownika pięć liczb, zapisze je w tablicy,
+        // a następnie policzy i wypisze silnię każdej z pobranych liczb.
+
+       /* int[] tab = new int[5];
+
+        for (int i = 0; i < tab.length; i++) {
+            int liczbyUzytkowniak = scanner.nextInt();
+            tab[i] = liczbyUzytkowniak;
+        }
+        for (int i1 : tab) {
+            if (i1 < 0) {
+                System.out.println("do wyliczenia silni liczba musi byc wieksza lub = 0" + i1);
+            } else {
+                int silnia = 1;
+                for (int i = 1; i <= i1; i++) {
+                    silnia = silnia * i;
+                }
+                System.out.println("silnia liczby " + i1 + "wynosi " + silnia);
+            }
+        }*/
+
+        // Napisz program, w którym zdefiniujesz dwie tablice przechowujące wartości typu String.
+        // Zainicjalizuj obie tablice takimi samymi wartościami, w takiej samej kolejności.
+        // Napisz kod, który porówna obie tablice i odpowie na pytanie, czy są one takie same.
+
+       /* String[] pierwszaTablica = {"ala", "ma", "kota"};
+        String[] drugaTablica = {"ala", "ma", "kota"};
+
+        boolean jestRoznica = false;
+
+        if (pierwszaTablica.length != drugaTablica.length) {
+            jestRoznica = true;
+        } else {
+            for (int i = 0; i < pierwszaTablica.length ; i++) {
+                if (!pierwszaTablica[i].equals(drugaTablica[i])){
+                    jestRoznica=true;
+                }
+            }
+            if (jestRoznica){
+                System.out.println("tablice nie sa takie same");
+            } else {
+                System.out.println("tablice sa takie same");
+            }
+        }*/
+        //Napisz program, który pobierze od użytkownika trzy boki trójkąta,
+        // policzy jego obwód i wypisze wynik na ekran.
+     /*   System.out.println("aby policzyc obwod podaj dlugosci bokow");
+        int obowod = scanner.nextInt() + scanner.nextInt() + scanner.nextInt();
+        System.out.println("Obwod trojkata to : " + obowod);*/
+
+        //Napisz program, który wczyta od użytkownika trzy słowa i wypisze je w odwrotnej kolejności, niż podał je użytkownik, oddzielone przecinkami. Dla przykładu, gdy użytkownik poda:
+        //
+        //Ala
+        //ma
+        //kota
+        //To program powinien wypisać kota, ma, Ala
+
+        /*String[] tab = {"ala", "ma", "kota"};*/
+        /*for (int i = tab.length - 1; i >= 0; i--) {
+            String slowoNieOdwrocone = tab[i];
+
+            String[] slowoPoSplit = slowoNieOdwrocone.split(" , ");
+
+            System.out.println(Arrays.toString(slowoPoSplit));
+        }*/
+
+        //Napisz program, który wczyta od użytkownika jeden wyraz i wypisz liczbę znaków, z których się składa.
+        // Dla przykładu, dla podanego słowa nauka wypisze 5.
+/*        System.out.println("podaj jeden wyraz: ");
+        String podanyWyraz= scanner.nextLine();
+        System.out.println("w tym slowie jest dokladnie : "+ podanyWyraz.length() + " litery");*/
+
+//Zmień poniższy kod, by wynik wypisany na ekran nie był liczbą zaokrągloną do całkowitej wartości,
+// lecz zmienną rzeczywistą (z częścią ułamkową):
+
+ /*       int x = 5;
+        int y = 2;
+        double wynik = (double) x / y;
+
+        System.out.println(wynik);*/
+
+        //Napisz program, który pobierze od użytkownika słowo i wypisze je z małymi literami zamienionymi na wielkie.
+        // Skorzystaj z metody toUpperCase typu String.
+       /* System.out.println("podaj slowo");
+        String slowoUzytkownika=scanner.nextLine();
+        System.out.println(slowoUzytkownika.toUpperCase());*/
+
+        //Napisz program, który policzy pole koła o promieniu podanym przez użytkownika i wypisze wynik na ekran.
+        // Promień koła powinien być liczbą całkowitą – do jego przechowywania użyj zmiennej typu int.
+        /*System.out.println("podaj promien kola");
+        int promienUzytkownika = scanner.nextInt();
+        double polekola = 3.14 * promienUzytkownika * promienUzytkownika;
+        System.out.println(polekola);*/
+
+
+        //Napisz program, który wczyta od użytkownika liczbę i wypisze, czy jest podzielna bez reszty przez 3.
+        // Skorzystaj z operatora reszty z dzielenia – jeżeli reszta z dzielenia jest równa 0,
+        // to liczba jest podzielna przez 3.
+     /*   System.out.println("podaj liczbe");
+        int liczbaUzytkownika = scanner.nextInt();
+
+        if (liczbaUzytkownika % 3 == 0) {
+            System.out.println("podana przez Ciebie liczba jest podzielna przez 3");
+        }else {
+            System.out.println("liczba nie jest podzielna prze 3");
+        }*/
+
+//Napisz program, który wczyta od użytkownika trzy liczby i odpowie na pytanie,
+// czy można z nich zbudować trójkąt (suma każdych dwóch boków powinna być większa od trzeciego boku).
+
+        int[] tablicaBokowTrojkata = new int[3];
+
+        for (int i = 0; i < tablicaBokowTrojkata.length ; i++) {
+            int bokTrojkatapodanyPrzezUzytkownika = scanner.nextInt();
+            tablicaBokowTrojkata[i]=bokTrojkatapodanyPrzezUzytkownika;
+
+        }
+
+    }
 }
+
+
+
+
 
 
 
