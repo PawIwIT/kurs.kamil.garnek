@@ -302,16 +302,295 @@ public class Main {
 //Napisz program, który wczyta od użytkownika trzy liczby i odpowie na pytanie,
 // czy można z nich zbudować trójkąt (suma każdych dwóch boków powinna być większa od trzeciego boku).
 
-        int[] tablicaBokowTrojkata = new int[3];
+    /*    int[] tablicaBokowTrojkata = new int[3];
 
-        for (int i = 0; i < tablicaBokowTrojkata.length ; i++) {
+        for (int i = 0; i < tablicaBokowTrojkata.length; i++) {
             int bokTrojkatapodanyPrzezUzytkownika = scanner.nextInt();
-            tablicaBokowTrojkata[i]=bokTrojkatapodanyPrzezUzytkownika;
+            tablicaBokowTrojkata[i] = bokTrojkatapodanyPrzezUzytkownika;
 
         }
+            if (tablicaBokowTrojkata[0] + tablicaBokowTrojkata[1] > tablicaBokowTrojkata[2]) {
+                System.out.println("z podanych bokow mozesz zbudowac trojkat");
+            } else if (tablicaBokowTrojkata[0] + tablicaBokowTrojkata[2] > tablicaBokowTrojkata[1]) {
+                System.out.println("z podanych bokow mozesz zbudowac trojkat");
+            } else if (tablicaBokowTrojkata[1] + tablicaBokowTrojkata[2] > tablicaBokowTrojkata[0]) {
+                System.out.println("z podanych bokow mozesz zbudowac trojkat");
+            } else {
+                System.out.println("z podanych bokow nie mozna zbudowac trojkata");
+            }*/
+
+
+        //Napisz program, który pobierze od użytkownika trzy liczby i wypisze największą z nich.
+
+     /*   int[] tablicaIntow = new int[3];
+        for (int i = 0; i < tablicaIntow.length; i++) {
+            int liczbaPobranaOdUzytkownika = scanner.nextInt();
+            tablicaIntow[i] = liczbaPobranaOdUzytkownika;
+        }
+
+        if (tablicaIntow[0] >= tablicaIntow[1]) {
+            if (tablicaIntow[0] >= tablicaIntow[2]) {
+                System.out.println("najwieksza liczba to : " + tablicaIntow[0]);
+            } else {
+                System.out.println("nawieksza liczba to " + tablicaIntow[2]);
+            }
+        } else {
+            if (tablicaIntow[1] >= tablicaIntow[2]) {
+                System.out.println("najwieksza liczba to: " + tablicaIntow[1]);
+            } else {
+                System.out.println("najwieksza liczba to: " + tablicaIntow[2]);
+            }
+            }*/
+
+        //Napisz program, który pobierze od użytkownika numer miesiąca i wypisze jego nazwę,
+        // lub komunikat "Nieprawidlowy numer miesiaca", jeżeli podany numer będzie spoza zakresu 1..12. Skorzystaj z instrukcji switch.
+       /* System.out.println("Podaj numer: ");
+        int numerMiesiacaodUzytkownika = scanner.nextInt();
+        if (numerMiesiacaodUzytkownika > 12) {
+            System.out.println("Musisz podaj liczbe zgodna z liczba miesiecy w roku!");
+        }
+
+            switch (numerMiesiacaodUzytkownika) {
+                case 1:
+                    System.out.println("styczen");
+                    break;
+                case 2:
+                    System.out.println("luty");
+                    break;
+                case 3:
+                    System.out.println("marzec");
+                    break;
+                case 4:
+                    System.out.println("kwiecien");
+                    break;
+                case 5:
+                    System.out.println("maj");
+                    break;
+                case 6:
+                    System.out.println("czerwiec");
+                    break;
+                case 7:
+                    System.out.println("lipiec");
+                    break;
+                case 8:
+                    System.out.println("sierpien");
+                    break;
+                case 9:
+                    System.out.println("wrzesien");
+                    break;
+                case 10:
+                    System.out.println("pazdziernik");
+                    break;
+                case 11:
+                    System.out.println("listopad");
+                    break;
+                case 12:
+                    System.out.println("grudzien");
+                    break;
+
+                default:
+                    System.out.println("nieprawidlowa cyfra");
+            }*/
+
+        // Napisz program, który pobierze od użytkownika jego imię i odpowie na pytanie, czy jego imię jest takie samo,
+        // jak Twoje (załóżmy, że użytkownik podaje swoje imię bez polskich znaków).
+        //
+        //Uwaga! Pamiętaj, aby skorzystać z metody equals typu String zamiast porównywać stringi za pomocą operatora == !
+
+      /*  System.out.println("sprawdzmy czy nasze imiona sa takie same: ");
+        String podaneImiePrzezUzytkownika = scanner.nextLine();
+        if (podaneImiePrzezUzytkownika.equals("pawel")) {
+            System.out.println("nasze imiona sa takie same");
+
+        } else {
+
+            System.out.println("nasze imiona sa rozne");
+        }*/
+
+        //Napisz program, który pobiera wiek od użytkownika. Zapisz w zmiennej typu boolean informację, czy użytkownik jest pełnoletni, czy nie.
+        // Skorzystaj z trój-argumentowego operatora warunkowego. Wypisz wynik zdefiniowanej zmiennej typu boolean na ekran.
+/*        boolean czyPelnoletni;
+
+        System.out.println("podaj swoj wiek");
+        int wiekUzytkownika = scanner.nextInt();
+
+        czyPelnoletni = wiekUzytkownika >= 18 ? true : false;
+        System.out.println("czy pelnoletni? "+ czyPelnoletni);*/
+
+        //Napisz program, który pobierze od użytkownika rok i odpowie na pytanie, czy podany rok jest rokiem przestępnym, czy nie. Wskazówka: rok jest rokiem przestępnym, jeżeli:
+        //
+        //dzieli się przez 4 i nie dzieli się przez 100
+        //lub
+        //dzieli się przez 400.
+
+       /* System.out.println("podaj rok");
+
+        int rokPodanyPrzezUzytkownika = scanner.nextInt();
+
+        if (rokPodanyPrzezUzytkownika % 4 == 0 && rokPodanyPrzezUzytkownika % 100 !=0 || rokPodanyPrzezUzytkownika % 400==0) {
+            System.out.println("ten rok jest przestepnym");
+        } else {
+            System.out.println("podany rok nie jest rokiem przestepnym");
+        }*/
+
+        //ZADANIA Z DZIAŁU TABLICE
+
+        //Napisz program, który wypisze co drugi element zdefiniowanych przez Ciebie tablic.
+        //
+        // Pierwsza tablica powinna mieć parzystą liczbę elementów, a druga nieparzystą.
+
+       /* int[] liczbyparzyste = {2, 4, 6, 8};
+        int[] liczbyNieParzyste = {3, 5, 7, 9};
+
+        for (int i = 0; i < liczbyparzyste.length; i+=2) {
+            System.out.println(liczbyparzyste[i]);
+        }*/
+//Napisz program, który wypisze największą liczbę z tablicy. Tablicę zainicjalizuj przykładowymi wartościami.
+
+        /*int[] tabLiczby = {900,100, 50, 40, 58, 600};
+
+        int najwiekszaLiczba = tabLiczby[0];
+        for (int i = 1; i < tabLiczby.length; i++) {
+            if (tabLiczby[i] > najwiekszaLiczba) {
+                najwiekszaLiczba = tabLiczby[i];
+            }
+        }
+        System.out.println("najwieksza liczba to: " + najwiekszaLiczba);*/
+
+        //Napisz program, w którym zdefiniujesz tablicę wartości typu String i zainicjalizujesz ją przykładowymi wartościami.
+        // Skorzystaj z pętli for-each, aby wypisać wszystkie wartości tablicy ze wszystkimi literami zamienionymi na wielkie.
+        // Skorzystaj z funkcjonalności toUpperCase wartości typu String, którą poznaliśmy już w jednym z poprzednich rozdziałów.
+/*
+        String[] tablica = {"ala","ma","kota"};
+
+        for (String slowa : tablica) {
+            System.out.println(slowa.toUpperCase());
+        }*/
+//Napisz program, który pobierze od użytkownika pięć słów i zapisze je w tablicy.
+// Następnie, program powinien wypisać wszystkie słowa, od ostatniego do pierwszego, z literami zapisanymi od końca do początku.
+// Dla przykładu, dla podanych słów "Ala", "ma", "kota", "i", "psa" program powinien wypisać: "asp", "i", "atok", "am", "alA".
+
+ /*       String[] tablicaSlowUzytkownika =new String[5];
+
+        for (int i = 0; i < tablicaSlowUzytkownika.length ; i++) {
+            System.out.println((i+1)+"slowo: ");
+        tablicaSlowUzytkownika[i]= scanner.nextLine();
+        }
+        for (int i = tablicaSlowUzytkownika.length-1; i >=0 ; i--) {
+            for (int j = tablicaSlowUzytkownika[i].length()-1; j >=0 ; j--) {
+                System.out.print(tablicaSlowUzytkownika[i].charAt(j));
+
+            }
+        }*/
+
+//Napisz metodę, która zwróci ostatni znak w przesłanym jako argument stringu.
+//Dla przykładu, dla argumentu "Witaj", metoda powinna zwrócić literę j.
+
+ /*       System.out.println(ostatniaLiteraSlowa("Witajcie"));
+        }
+    private static char ostatniaLiteraSlowa(String s) {
+        return s.charAt(s.length()-1);*/
+
+
+        //Napisz metodę, która odpowiada na pytanie, czy podany string jest palindromem.
+        // Palindromy to słowa, które są takie same czytane od początku i od końca, np. kajak.
+
+        //Dla przykładu, dla argumentu "kajak" (a także "Kajak"), metoda ta powinna zwrócić true, a dla argumentu "kot" – false.
+
+
+ /*    System.out.println(
+             "Czy kajak to palindrom? " + czyPalindrom("kajak")
+    );
+
+    System.out.println(
+            "Czy Kajak to palindrom? " + czyPalindrom("Kajak")
+    );
+
+    System.out.println(
+            "Czy kot to palindrom? " + czyPalindrom("kot")
+    );
+}
+
+    public static boolean czyPalindrom(String slowo) {
+        String slowoMaleLitery = slowo.toLowerCase();
+        int dlugoscSlowa = slowo.length();
+
+        for (int i = 0; i < dlugoscSlowa / 2; i++) {
+            if (slowoMaleLitery.charAt(i) != slowoMaleLitery.charAt(dlugoscSlowa - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;*/
+
+
+        //Napisz metodę, która przyjmuje tablicę liczb całkowitych i zwraca sumę wszystkich elementów tej tablicy.
+        //
+        //Dla przykładu, dla tablicy o elementach { 1, 7, 20, 100 } metoda powinna zwrócić liczbę 128.
+
+     /*   int[] tablicaLiczb = {1, 7, 20, 100};
+
+        System.out.println(sumaLiczb(tablicaLiczb));
+    }
+
+    public static int sumaLiczb(int[] tablica) {
+        int suma = 0;
+
+        for (int i : tablica) {
+            suma += i;
+        }
+        return suma;*/
+
+        //Napisz metodę, która przyjmuje jako argument string i znak (char) i zwraca liczbę równą liczbie wystąpień podanego znaku w danym stringu.
+        //
+        //Dla argumentów: "Ala ma kota", 'a', metoda powinna zwrócić 3, ponieważ string zawiera trzy małe litery a. Uwaga: znaki zapisujemy w apostrofach, a stringi w cudzysłowach.
+        // Przykładowe wywołanie metody, którą należy napisać w tym zadaniu:
+        //
+        //int liczbaLiterA = zliczWystapienia("Ala ma kota", 'a');
+  /*      System.out.println(zliczWystapienia("ala ma kota",'a'));
+    }
+    private static int zliczWystapienia(String slowa, char znak) {
+        int liczbaZnakow = 0;
+        for (int i = 0; i < slowa.length(); i++) {
+            if (slowa.charAt(i)==znak){
+                liczbaZnakow++;
+            }
+        }
+        return liczbaZnakow;*/
+
+
+
+        //    Utwórz klasę TeddyBear, który będzie miał pole prywatne String name; Dodaj konstruktor, który przyjmie za parametr imię.
+        //    Co to znaczy że pole jest prywatne?
+        //    Dodaj metodę, która wyświetli imię misia;
+
+ /*       TeddyBear teddyBear = new TeddyBear("Misia");
+        String imie = teddyBear.getImie();
+        System.out.println(imie);*/
+
+//Stwórz klasę Student która posiada:
+//        - pole numer indeksu
+//        - pole imie
+//        - pole nazwisko
+//        - listę ocen
+//
+//	- kolekcję ocen:
+//		a) tablicę ocen (stwórz tablicę maksymalnie 100 ocen)
+//        - metody getterów i setterów
+//        - metodę do obliczania średniej
+//        - metodę która zwraca true jeśli żadna z ocen w liście/tablicy ocen nie jest 1 ani 2, oraz false w przeciwnym razie.
+
+
+        /*JOptionPane.showMessageDialog(null,"Hello");*/
+
 
     }
 }
+
+
+
+
+
 
 
 
