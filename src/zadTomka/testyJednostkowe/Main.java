@@ -1,7 +1,7 @@
 package zadTomka.testyJednostkowe;
 
-public class Main {
-    public static void main(String[] args) {
+/*public class Main {
+    public static void main(String[] args) {*/
 /*czyParzysta_LiczbaParzystaDodatnia_zwrociParzysta();
     }*/
 
@@ -64,6 +64,7 @@ public class Main {
 
 
 
+/*
 
     }
-}
+}*/
