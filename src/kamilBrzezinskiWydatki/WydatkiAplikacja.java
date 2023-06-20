@@ -18,8 +18,8 @@ public class WydatkiAplikacja {
 
             switch (wybor) {
                 case 1 -> managerWydatkow.wyswietlWysztkieWydatki();
-                case 2 -> System.out.println("2.wyswietl wydatki z wybranego miesiaca");
-                case 3 -> System.out.println("3.dodaj wydatek");
+                case 2 -> managerWydatkow.wyswietlWydatkizWybranegoMiesiaca(scanner);
+                case 3 -> managerWydatkow.dodajWydatek(scanner);
                 case 4 -> {
                     scanner.close();
                     System.exit(0);

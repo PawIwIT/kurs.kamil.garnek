@@ -6,20 +6,21 @@ import java.util.Scanner;
 
 public class ManagerWydatkow {
 
-    List<WydatekKonstrukcja> listaWydatkow = new ArrayList<>();
+    List<Wydatek> listaWydatkow = new ArrayList<>();
 
 
     public void wyswietlWysztkieWydatki() {
-        listaWydatkow.forEach(wydatek ->{
-            System.out.println(wydatek.getOpisWydatku());
-            System.out.println(wydatek.getTyp());
-            System.out.println(wydatek.getWartosc());
-            System.out.println(wydatek.getMiesiac());
-        });
-
+        listaWydatkow.forEach(ManagerWydatkow::opisWydatku);
     }
 
-    public void dodajWydatek(Scanner scanner){
+    private static void opisWydatku(Wydatek wydatek) {
+        System.out.println(wydatek.getOpisWydatku());
+        System.out.println(wydatek.getTyp());
+        System.out.println(wydatek.getWartosc());
+        System.out.println(wydatek.getMiesiac());
+    }
+
+    public void dodajWydatek(Scanner scanner) {
         System.out.println("Jaki wydatek chcesz dodac?");
         String opisWydatku = scanner.nextLine();
         System.out.println("Jakiego tyu jest to wydatek?");
@@ -29,9 +30,18 @@ public class ManagerWydatkow {
         System.out.println("z ktorego miesiaca to wydatek");
         int miesiacWydatku = Integer.parseInt(scanner.nextLine());
 
-
-        WydatekKonstrukcja wydatek = new WydatekKonstrukcja(typWydatku, miesiacWydatku, cena, opisWydatku);
+        Wydatek wydatek = new Wydatek(typWydatku, miesiacWydatku, cena, opisWydatku);
         listaWydatkow.add(wydatek);
+    }
+
+    public void wyswietlWydatkizWybranegoMiesiaca(Scanner scanner) {
+        System.out.println("z ktorego meisiaca wydatki chcesz wyswietlic?");
+        int numerMiesiacaWydatkow = Integer.parseInt(scanner.nextLine());
+
+        listaWydatkow.stream()
+                .filter(wydatek -> wydatek.getMiesiac() == numerMiesiacaWydatkow)
+                .forEach(ManagerWydatkow::opisWydatku);
+
     }
 
 }

@@ -1,12 +1,12 @@
 package kamilBrzezinskiWydatki;
 
-public class WydatekKonstrukcja {
+public class Wydatek {
     private String typ;
     private int miesiac;
     private double wartosc;
     private String opisWydatku;
 
-    public WydatekKonstrukcja(String typ, int miesiac, double wartosc, String opisWydatku) {
+    public Wydatek(String typ, int miesiac, double wartosc, String opisWydatku) {
         this.typ = typ;
         this.miesiac = miesiac;
         this.wartosc = wartosc;
