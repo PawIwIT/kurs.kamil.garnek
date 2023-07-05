@@ -1,6 +1,6 @@
 package brzezinskiObiektowosc.Dysk;
 
-import brzezinskiObiektowosc.Pliki;
+import brzezinskiObiektowosc.Pliki.Pliki;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class HDDDysk implements Dysk {
     public void listaPlikow() {
 
         for (Pliki pliki : plikiHDD) {
-            System.out.println(pliki.getNazwa());
+            System.out.println(pliki.getName());
         }
 
     }
@@ -27,7 +27,7 @@ public class HDDDysk implements Dysk {
     @Override
     public Pliki znajdzPlik(String name) {
         Optional<Pliki> znajdzPlik = plikiHDD.stream()
-                .filter(pliki -> pliki.getNazwa().equals(name))
+                .filter(pliki -> pliki.getName().equals(name))
                 .findFirst();
 
         return znajdzPlik.orElseThrow();

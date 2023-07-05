@@ -1,6 +1,6 @@
 package brzezinskiObiektowosc.Dysk;
 
-import brzezinskiObiektowosc.Pliki;
+import brzezinskiObiektowosc.Pliki.Pliki;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class SSDDysk implements Dysk {
     public void listaPlikow() {
         Collection<Pliki> kolekcjaPlikow = plikiSSD.values();
         for (Pliki pliki : kolekcjaPlikow) {
-            System.out.println(pliki.getNazwa());
+            System.out.println(pliki.getName());
 
         }
     }

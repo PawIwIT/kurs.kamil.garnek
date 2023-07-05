@@ -1,6 +1,7 @@
 package brzezinskiObiektowosc;
 
 import brzezinskiObiektowosc.Dysk.Dysk;
+import brzezinskiObiektowosc.usbpamiec.USBPamiec;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ public class Komputer {
     private Dysk dysk;
     private Sluchawki sluchawki;
 
-    List<PamiecUSB> listaUzadzenUSB = new ArrayList<>();
+    List<USBPamiec> listaUzadzenUSB = new ArrayList<>();
 
     public Monitor getMonitor() {
         return monitor;
@@ -41,7 +42,22 @@ public class Komputer {
         this.dysk = dysk;
     }
 
-    public List<PamiecUSB> getListaUzadzenUSB() {
+    private List<USBPamiec> getListaUzadzenUSB() {
         return listaUzadzenUSB;
+    }
+
+    public void dodajUrzadzenieUSB(USBPamiec usbPamiec) {
+        boolean podlczaczony = usbPamiec.podlczacz();
+        if (podlczaczony) {
+            listaUzadzenUSB.add(usbPamiec);
+        }
+    }
+
+    public void usunUrzadzenieUSB(USBPamiec usbPamiec) {
+        boolean odloczony = usbPamiec.odlacz();
+        if (!odloczony) {
+            System.out.println("urzadzenie odpiete sila");
+        }
+        listaUzadzenUSB.remove(usbPamiec);
     }
 }

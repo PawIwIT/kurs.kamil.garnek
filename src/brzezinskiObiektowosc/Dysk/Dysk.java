@@ -1,6 +1,6 @@
 package brzezinskiObiektowosc.Dysk;
 
-import brzezinskiObiektowosc.Pliki;
+import brzezinskiObiektowosc.Pliki.Pliki;
 
 public interface Dysk {
 
